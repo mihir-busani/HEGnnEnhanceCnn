@@ -2,7 +2,7 @@ import torch
 from torch import nn
 from typing import List, Optional, Tuple
 from models import MLP
-from models.resnet_gnn import GCNResNet
+from models.resnet_gnn import GINTopK4
 from utils import init_weights
 from const import(
     GRAPH,
@@ -382,7 +382,7 @@ class GNNResNet(nn.Module):
         
         self.head = nn.Linear(out_features, num_classes) if num_classes > 0 else nn.Identity()
         
-        self.model = GCNResNet(
+        self.model = GINTopK4(
             gnn_in_features=gnn_in_features,
         )
     
