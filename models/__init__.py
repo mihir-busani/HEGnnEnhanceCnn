@@ -1,3 +1,5 @@
+with open("models/__init__.py", "w") as f:
+    f.write('''
 from .gnn import(
     GINTopK4,
     GINTopK2,
@@ -31,4 +33,4 @@ cnn_model_dict = {
 # fusion_dict = {
 #     'gcn':GCNViT,
 # }
-
+''')
