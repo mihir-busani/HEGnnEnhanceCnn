@@ -33,10 +33,10 @@ cnn_model_dict = {
 # fusion_dict = {
 #     'gcn':GCNViT,
 # }
-''')
 from .gnn import gnn_model_dict
 from .mlp import MLP, mlp_model_dict
 from .resnet import cnn_model_dict
 
 print("models/__init__.py loaded")
 
+''')
