@@ -35,3 +35,4 @@ cnn_model_dict = {
 # }
 ''')
     from .gnn import gnn_model_dict
+    from .mlp import MLP, mlp_model_dict
