@@ -1,13 +1,11 @@
-with open("models/__init__.py", "w") as f:
-    f.write('''
-from .gnn import(
+from .gnn import (
     GINTopK4,
     GINTopK2,
     GCNTopK4,
     GCNTopK2
 )
 
-from .resnet import(
+from .resnet import (
    resnet32,
    resnet110,
    wide_resnet20_8,
@@ -18,25 +16,22 @@ from .mlp import MLP
 # from .resnet_gnn import GCNResNet
 
 gnn_model_dict = {
-    'gintopk4' : GINTopK4,
-    'gintopk2' : GINTopK2,
-    'gcntopk4' : GCNTopK4,
-    'gcntopk2' : GCNTopK2,
+    'gintopk4': GINTopK4,
+    'gintopk2': GINTopK2,
+    'gcntopk4': GCNTopK4,
+    'gcntopk2': GCNTopK2,
 }
 
 cnn_model_dict = {
-    'resnet32' : resnet32, 
+    'resnet32': resnet32, 
     'resnet110': resnet110, 
     'wide_resnet20_8': wide_resnet20_8,
 }
 
-# fusion_dict = {
-#     'gcn':GCNViT,
-# }
-from .gnn import gnn_model_dict
-from .mlp import MLP, mlp_model_dict
-from .resnet import cnn_model_dict
+# If mlp_model_dict is defined in mlp.py, then import it here:
+try:
+    from .mlp import mlp_model_dict
+except ImportError:
+    mlp_model_dict = None
 
 print("models/__init__.py loaded")
-
-''')
