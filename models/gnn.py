@@ -270,4 +270,11 @@ class GCNTopK2(torch.nn.Module):
 
 if __name__ == '__main__':
     model = GCNTopK2(in_features=223)
+
+gnn_model_dict = {
+    "GCNTopK2": GCNTopK2,
+    "GCNTopK4": GCNTopK4,
+    "GINTopK2": GINTopK2,
+    "GINTopK4": GINTopK4,
+}
     
