@@ -6,14 +6,12 @@ from .gnn import (
 )
 
 from .resnet import (
-   resnet32,
-   resnet110,
-   wide_resnet20_8,
+    resnet32,
+    resnet110,
+    wide_resnet20_8,
 )
 
-from .mlp import MLP 
-# from .trans_gnn import GCNViT
-# from .resnet_gnn import GCNResNet
+from .mlp import MLP
 
 gnn_model_dict = {
     'gintopk4': GINTopK4,
@@ -23,15 +21,7 @@ gnn_model_dict = {
 }
 
 cnn_model_dict = {
-    'resnet32': resnet32, 
-    'resnet110': resnet110, 
+    'resnet32': resnet32,
+    'resnet110': resnet110,
     'wide_resnet20_8': wide_resnet20_8,
 }
-
-# If mlp_model_dict is defined in mlp.py, then import it here:
-try:
-    from .mlp import mlp_model_dict
-except ImportError:
-    mlp_model_dict = None
-
-print("models/__init__.py loaded")
