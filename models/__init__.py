@@ -34,3 +34,4 @@ cnn_model_dict = {
 #     'gcn':GCNViT,
 # }
 ''')
+    from .gnn import gnn_model_dict
