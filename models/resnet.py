@@ -247,3 +247,8 @@ if __name__ == "__main__":
     a = torch.randn(32, 3, 224, 224)
     output = model(a)
     print(output.shape)
+cnn_model_dict = {
+    "resnet32": resnet32,
+    "resnet110": resnet110,
+    "wide_resnet20_8": wide_resnet20_8,
+}
